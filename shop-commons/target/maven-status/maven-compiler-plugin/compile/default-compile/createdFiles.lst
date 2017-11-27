@@ -1,0 +1,8 @@
+com\aron\shop\model\Clients.class
+com\aron\shop\model\Tracker.class
+com\aron\shop\model\Reviews.class
+com\aron\shop\model\Provider.class
+com\aron\shop\model\Categories.class
+com\aron\shop\dao\CategoriesDAO.class
+com\aron\shop\model\Orders.class
+com\aron\shop\model\Products.class
