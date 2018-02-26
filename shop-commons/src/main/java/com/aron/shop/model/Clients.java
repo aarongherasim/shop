@@ -21,7 +21,10 @@ public class Clients {
 	
 	@Column(name="pass")
 	private String password;
-	
+
+	@Column(name="role")
+	private String role;
+
 	@Column(name="date_of_birth")
 	private LocalDate dateOfBirth;
 	
@@ -41,13 +44,14 @@ public class Clients {
 	public Clients(){
 	}
 
-	public Clients(Long idClient, String firstName, String lastName, String password, LocalDate dateOfBirth,
+	public Clients(Long idClient, String firstName, String lastName, String password, String role, LocalDate dateOfBirth,
 			String clientEmail, String clientPhone, String clientAddress, List<Orders> orders) {
 		super();
 		this.idClient = idClient;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.password = password;
+        this.role = role;
 		this.dateOfBirth = dateOfBirth;
 		this.clientEmail = clientEmail;
 		this.clientPhone = clientPhone;
@@ -62,8 +66,6 @@ public class Clients {
 	public void setOrders(List<Orders> orders) {
 		this.orders = orders;
 	}
-
-
 
 	public Long getIdClient() {
 		return idClient;
@@ -96,6 +98,10 @@ public class Clients {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	public String getRole() { return role; }
+
+	public void setRole(String role) { this.role = role; }
 
 	public LocalDate getDateOfBirth() {
 		return dateOfBirth;
